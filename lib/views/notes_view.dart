@@ -9,13 +9,16 @@ class NotesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton:FloatingActionButton(onPressed: (){},child:const Icon(Icons.add),),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 4),
           child: Column(
-            children: const [
+            children:const [
               CustomAppBar(),
-              Expanded(child: NotesListView())
+              Expanded(
+                  child: NotesListView(),
+              ),
             ],
           ),
         ),
@@ -23,5 +26,3 @@ class NotesView extends StatelessWidget {
     );
   }
 }
-
-
