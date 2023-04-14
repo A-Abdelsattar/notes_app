@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'custom_button.dart';
 import 'custom_text_form_field.dart';
 
 class AddNoteButtonSheet extends StatelessWidget {
@@ -7,11 +8,14 @@ class AddNoteButtonSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children:const [
-        CustomTextFormField(title: 'Title',),
-        CustomTextFormField(title:'content',maxLines: 6,),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children:const [
+          CustomTextFormField(title: 'Title',),
+          CustomTextFormField(title:'content',maxLines: 6,),
+          CustomButton()
+        ],
+      ),
     );
   }
 }
